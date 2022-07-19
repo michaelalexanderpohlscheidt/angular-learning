@@ -1,0 +1,14 @@
+<!--
+  {{INTERPOLATION}}
+
+  Mit der Interpolation kann man Properties aus einer Komponenteklasse ausgeben.
+  Vor der Ausgabe werden diese von Angular ausgewertet.
+  Dies bedeutet, dass wir auch berechnungen usw. mit der Interpolation ausführen können.
+
+  Werden Daten im Hintergrund geändert werden diese im Frontend automatisch aktuallisiert.
+-->
+
+<p>Einfache Ausgabe: {{ num }}</p>
+<p>Vor der Ausgabe wird eine Berechnung gemacht (number²): {{ num * num }}</p>
+<p>Beispiel String-Literal Ausgabe: {{ 'Mein Name ist ' + name + ' und bin ' + num + ' Jahre alt'}}</p>
+<p>Beispiel aktuallisierte Ausgabe weil im Hintergrund Daten geändert werden: {{ randomNum }}</p>

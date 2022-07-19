@@ -1,0 +1,15 @@
+<!--
+  (EVENT-BINDING)
+
+  Dient dazu um auf Ereignisse auf dem Template zu reagieren.
+  Praktisch den umgekehrten Weg der [Property-Binding].
+  Also Daten fließe vom Template hin zu Komponentenklasse.
+
+  Ereignisse auf dem Template kann z.B. ein Button-Klick sein.
+-->
+
+<p>
+  Auf dem Button klicken um den Counter zu erhöhen: <button (click)="onCounterClick()">Click me!</button>
+  <br>
+  Counter: {{ counter }}
+</p>
