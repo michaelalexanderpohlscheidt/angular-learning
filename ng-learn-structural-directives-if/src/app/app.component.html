@@ -1,0 +1,27 @@
+<p>
+  <button (click)="onToggleEngine()">Click here</button> to active the Engine (isActive = {{isActive}}).
+</p>
+
+<!-- Class binding and ngIf example -->
+<span [class.active]="isActive" [class.notActive]="!isActive">
+  <p *ngIf="isActive">Engine is active</p>
+  <p *ngIf="!isActive">Engine is not active</p>
+</span>
+
+
+<!-- ngIf with else structure -->
+<span [class.active]="isActive" [class.notActive]="!isActive">
+  <p *ngIf="isActive; else notActive">Engine is active</p>
+  <ng-template #notActive>
+    <p>Engine is not active</p>
+  </ng-template>
+</span>
+
+<!-- ngIf then else structure (also only then works)-->
+<ng-container *ngIf="isActive; then show else noShow"></ng-container>
+<ng-template #show>
+  <p class="active">Engine is active</p>
+</ng-template>
+<ng-template #noShow>
+  <p class="notActive">Engine is not active</p>
+</ng-template>
